@@ -1,0 +1,17 @@
+<p-dataGrid [style]="{'margin-top':'20px','margin-bottom':'20px'}" [value]="doctors" [paginator]="false" [rows]="20">
+
+  <ng-template let-doctor pTemplate="item">
+    <div style="padding:3px" class="ui-g-12 ui-md-3">
+      <p-card title="{{doctor.FirstName}} {{doctor.LastName}}" subtitle="Subtitle" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+        <p-header>
+            <img src="Card" src="data:image/gif;base64,{{doctor.Image}}">
+        </p-header>
+        <div>{{doctor.Description}}</div>
+        <p-footer>
+            <button pButton type="button" label="Details"  style="margin-right: .25em"></button>
+
+        </p-footer>
+    </p-card>
+    </div>
+  </ng-template>
+</p-dataGrid>
