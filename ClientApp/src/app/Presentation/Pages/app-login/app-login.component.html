@@ -1,0 +1,29 @@
+<p-dialog header="" [(visible)]="display">
+  <p-header>
+    Login
+  </p-header>
+  <div class="ui-g">
+    <div class="ui-g-12 ui-md-12">
+      <div class="ui-g-4">
+        Login
+      </div>
+      <div class="ui-g-8">
+        <input pInputText type="text" />
+      </div>
+    </div>
+    <div class="ui-g-12 ui-md-12">
+      <div class="ui-g-4">
+        Password
+      </div>
+      <div class="ui-g-8">
+        <input pInputText type="password" />
+      </div>
+    </div>
+
+  </div>
+  <p-footer>
+    <button type="button" pButton icon="pi pi-check" (click)="login()" label="Ok"></button>
+    <button type="button" pButton icon="pi pi-close" (click)="display=false" label="Cancel" class="ui-button-secondary"></button>
+  </p-footer>
+</p-dialog>
+
