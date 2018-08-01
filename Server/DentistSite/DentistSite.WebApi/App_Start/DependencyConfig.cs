@@ -13,7 +13,7 @@ namespace DentistSite.WebApi.App_Start
   {
     public static void RegisterDependency()
     {
-      //DependencyResolver.SetResolver(new NinjectDependencyResolver());
+      DependencyResolver.SetResolver(new NinjectDependencyResolver());
       GlobalConfiguration.Configuration.DependencyResolver = new NinjectResolver(NinjectKernel.Current);
     }
   }

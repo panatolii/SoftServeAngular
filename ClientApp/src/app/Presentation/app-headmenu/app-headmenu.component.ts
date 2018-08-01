@@ -1,6 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from "@angular/core";
 
 import { MenuItem } from 'primeng/api';
+import {  EventEmitter, Input, Output } from '@angular/core';
+import {AppLoginComponent} from '../Pages/app-login/app-login.component';
+
+import {MessageService} from 'primeng/api';
+import {Message} from 'primeng//api';
+
 
 @Component({
   selector: 'presentation/app-headmenu',
@@ -8,6 +14,11 @@ import { MenuItem } from 'primeng/api';
   styleUrls: ['./app-headmenu.component.css']
 })
 export class AppHeadmenuComponent {
+  constructor( ) {}
+  @Output()
+  login = new EventEmitter();
+  @ViewChild(AppLoginComponent)
+  loginCom: AppLoginComponent;
   items: MenuItem[] = [
     {
       label: 'Home',
@@ -24,5 +35,12 @@ export class AppHeadmenuComponent {
       icon: 'fa fa-user-md',
       routerLink: 'doctors'
     }
+
 ];
+
+onClick() {
+  console.log("onClick");
+  this.loginCom.showDialog();
+}
+
 }

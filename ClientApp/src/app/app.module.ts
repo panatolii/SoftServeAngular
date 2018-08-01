@@ -22,6 +22,15 @@ import { HttpClient, HttpClientModule, HttpResponse, HttpParams } from '@angular
 import { FormsModule } from '../../node_modules/@angular/forms';
 import {CardModule} from 'primeng/card';
 import {GrowlModule, Message} from 'primeng/primeng';
+import {DialogModule} from 'primeng/dialog';
+import { OAuthModule } from 'angular-oauth2-oidc';
+
+import { routes } from './app.routes';
+import { AppDoctorDetailsComponent } from './Presentation/Pages/Doctors/app-doctor-details/app-doctor-details.component';
+import {AppLoginComponent} from './Presentation/Pages/app-login/app-login.component';
+import {ToastModule} from 'primeng/toast';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
 
 
 @NgModule({
@@ -31,6 +40,9 @@ import {GrowlModule, Message} from 'primeng/primeng';
     AppHomeComponent,
     AppProfileComponent,
     AppDoctorListComponent,
+    AppDoctorDetailsComponent,
+    AppLoginComponent
+
 
 
   ],
@@ -47,14 +59,12 @@ import {GrowlModule, Message} from 'primeng/primeng';
     PanelModule,
     DataTableModule,
     InputTextModule,
-    RouterModule.forRoot ([
-      { path: 'home' , component: AppHomeComponent },
-      { path: 'profile' , component: AppProfileComponent },
-      { path: 'doctors' , component: AppDoctorListComponent },
-      { path: '' , redirectTo: 'home' , pathMatch: 'full' }
-    ])
+    DialogModule,
+    RouterModule.forRoot (routes),
+    OAuthModule.forRoot(),
+    ToastModule,MessagesModule,MessageModule
   ],
-  providers: [ {provide: ApiProvider, useClass: DbProvider}],
+  providers: [ {provide: ApiProvider, useClass: DbProvider}, ToastModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

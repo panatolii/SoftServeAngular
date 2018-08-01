@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using System.Web.Http.Description;
 using DentistSite.Bussines.Abstraction;
 using DentistSite.Domain.Entities.Base;
 using Ninject;
@@ -18,10 +19,12 @@ namespace DentistSite.WebBase.Controllers
     public IService<TEntity> Service { get; set; }
 
     [HttpGet]
-    public TEntity[] Get()
+    [ResponseType(typeof(EntityBase))]
+    public IHttpActionResult Get()
     {
       var entities = Service.List().ToArray();
-      return entities;
+      
+      return Ok(entities);
     }
   }
 

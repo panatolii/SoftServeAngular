@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DentistSite.WebApi", "DentistSite.WebApi\DentistSite.WebApi.csproj", "{FAAFDBA0-2560-4A6F-8EDB-B641E968D24B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DentistSite.Base", "DentistSite.Base\DentistSite.Base.csproj", "{58455355-DF93-4581-894D-97221812A27F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DentistSite.Bussines", "DentistSite.Bussines\DentistSite.Bussines.csproj", "{1BDC61C6-9658-4D87-9A27-C37026F02F83}"
@@ -17,16 +15,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DentistSite.WebBase", "Dent
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DentistSite.DataBase", "DentistSite.DataBase\DentistSite.DataBase.sqlproj", "{FD1C1428-6084-413B-9D86-6D3E78198404}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DentistSite.WebApi", "DentistSite.WebApi\DentistSite.WebApi.csproj", "{B3621FC0-6064-4BEF-93B2-C9EB64821567}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FAAFDBA0-2560-4A6F-8EDB-B641E968D24B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FAAFDBA0-2560-4A6F-8EDB-B641E968D24B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FAAFDBA0-2560-4A6F-8EDB-B641E968D24B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FAAFDBA0-2560-4A6F-8EDB-B641E968D24B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{58455355-DF93-4581-894D-97221812A27F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{58455355-DF93-4581-894D-97221812A27F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58455355-DF93-4581-894D-97221812A27F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,6 +49,10 @@ Global
 		{FD1C1428-6084-413B-9D86-6D3E78198404}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD1C1428-6084-413B-9D86-6D3E78198404}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FD1C1428-6084-413B-9D86-6D3E78198404}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B3621FC0-6064-4BEF-93B2-C9EB64821567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3621FC0-6064-4BEF-93B2-C9EB64821567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3621FC0-6064-4BEF-93B2-C9EB64821567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3621FC0-6064-4BEF-93B2-C9EB64821567}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

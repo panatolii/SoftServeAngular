@@ -14,6 +14,7 @@ namespace DentistSite.Bussines
     public override void Load()
     {
       this.Bind(typeof(IService<>)).To(typeof(Service<>));
+      this.Bind<IUserService>().To<UserService>();
     }
   }
 }

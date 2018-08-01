@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  display = false;
+
+    showDialog() {
+        this.display = true;
+    }
+    onLogin() {
+
+      this.display = true;
+    }
 }
