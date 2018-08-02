@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bootcam-ng": {
+    "DantistSite": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/bootcam-ng",
+            "outputPath": "dist/DantistSite",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,6 +23,18 @@
               "src/assets"
             ],
             "styles": [
+              {
+                "input": "node_modules/primeng/resources/primeng.min.css"
+              },
+              {
+                "input": "node_modules/primeng/resources/themes/omega/theme.css"
+              },
+              {
+                "input": "node_modules/primeicons/primeicons.css"
+              },
+              {
+                "input": "node_modules/font-awesome/css/font-awesome.css"
+              },
               "src/styles.css"
             ],
             "scripts": []
@@ -50,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "bootcam-ng:build"
+            "browserTarget": "DantistSite:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "bootcam-ng:build:production"
+              "browserTarget": "DantistSite:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "bootcam-ng:build"
+            "browserTarget": "DantistSite:build"
           }
         },
         "test": {
@@ -72,6 +84,18 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
+              {
+                "input": "node_modules/primeng/resources/primeng.min.css"
+              },
+              {
+                "input": "node_modules/primeng/resources/themes/omega/theme.css"
+              },
+              {
+                "input": "node_modules/primeicons/primeicons.css"
+              },
+              {
+                "input": "node_modules/font-awesome/css/font-awesome.css"
+              },
               "src/styles.css"
             ],
             "scripts": [],
@@ -95,7 +119,7 @@
         }
       }
     },
-    "bootcam-ng-e2e": {
+    "DantistSite-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +127,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "bootcam-ng:serve"
+            "devServerTarget": "DantistSite:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "bootcam-ng:serve:production"
+              "devServerTarget": "DantistSite:serve:production"
             }
           }
         },
@@ -123,5 +147,5 @@
       }
     }
   },
-  "defaultProject": "bootcam-ng"
+  "defaultProject": "DantistSite"
 }
